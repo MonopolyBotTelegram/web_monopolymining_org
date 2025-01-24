@@ -1,10 +1,6 @@
-// Ejemplo de animación suave al hacer scroll hacia una sección
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-list');
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('show');
 });
